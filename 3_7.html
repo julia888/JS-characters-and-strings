@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции работы со строками 7</title>
+</head>
+<body>
+	<!--Перевернуть строку, т.е. последние символы должны стать первыми, а первые последними. -->
+	<script>
+		function reverseStr(str) {
+			str = str.split(' ');
+			var newstr = [];
+			var arrNew = [];
+
+			newstr.push(str.reverse());
+
+			for (var i = 0; i < newstr.length; i++) {
+				for (var k = 0; k < newstr[i].length; k++) {
+					newstr[i][k] = newstr[i][k].split("").reverse().join("");
+					arrNew.push(newstr[i][k]);
+				}
+			}
+
+			alert(arrNew.join(" "));
+		}
+
+		reverseStr("Перевернуть строку, т.е. последние символы должны стать первыми, а первые последними.");
+		
+	</script>
+</body>
+</html>

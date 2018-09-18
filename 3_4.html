@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции работы со строками 4</title>
+</head>
+<body>
+	<!--Оставить в строке только один экземпляр каждого встречающегося символа. -->
+	<script>
+		function symbol(str) {
+			str = str.split('');
+			var strNew = [];
+			alert(str);
+			 for (var i = 0; i < str.length; i++) {
+				for (var k = 0; k < strNew.length; k++) {
+					if (str[i] == strNew[k]) {
+						str[i] = "";
+						break;
+					}
+				}
+				strNew.push(str[i]);
+			}
+			alert(strNew.join(''));
+		}
+
+		symbol("Оставить в строке только один экземпляр каждого встречающегося символа.");
+		
+	</script>
+
+</body>
+</html>

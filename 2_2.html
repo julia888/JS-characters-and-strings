@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции преобразования 2</title>
+</head>
+<body>
+	<!--вещественного числа в строку -->
+	<script>
+		function numToStr(num) {
+			if (!Number.isInteger(num)) {
+				alert(typeof num);
+				var str = num + "";
+				alert(typeof str);
+			}else{
+				alert("Целое число");
+			}
+		}
+		
+		numToStr(3.5);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции работы со строками 6</title>
+</head>
+<body>
+	<!--Удалить из строки ее часть с заданной позиции и заданной длины. -->
+	<script>
+		function delPos(str, position, len) {
+			str = str.split('');
+			str.splice(position, len);
+			alert(str.join(''));
+		}
+
+		delPos("Удалить из строки ее часть с заданной позиции и заданной длины.", 11, 6);
+		
+	</script>
+</body>
+</html>

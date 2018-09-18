@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции преобразования 3</title>
+</head>
+<body>
+	<!--строки в целое число -->
+	<script>
+		function StrToNum(str) {
+			if (typeof(str) == 'string') {
+				alert(typeof str);
+				var num = parseInt(str);
+				alert(num);
+				alert(typeof num);
+			}else{
+				alert("Не строка");
+			}
+		}
+		
+		StrToNum("12.7");
+		
+	</script>
+</body>
+</html>

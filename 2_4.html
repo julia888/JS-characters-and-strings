@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции преобразования 4</title>
+</head>
+<body>
+	<!--строки в вещественное число -->
+	<script>
+		function StrToNum(str) {
+			if (typeof(str) == 'string') {
+				alert(typeof str);
+				var num = parseFloat(str);
+				alert(num);
+				alert(typeof num);
+			}else{
+				alert("Не строка");
+			}
+		}
+		
+		StrToNum("12.7");
+	</script>
+</body>
+</html>

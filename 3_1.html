@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции работы со строками 1</title>
+</head>
+<body>
+	<!--Дана строка, состоящая из слов, разделенных пробелами и знаками препинания. Определить длину самого короткого слова. -->
+	<script>
+		function strLength(str) {
+			var arrStr = str.split(" ");
+			var dot = ".";
+			var comma = ",";
+			var arrRes = [];
+			var arrLength = [];
+			//добавляем в массив без знаков препинания
+			for (var i = 0; i < arrStr.length; i++) {
+				if (arrStr[i].includes(".") || arrStr[i].includes(",") || arrStr[i].includes("!") || arrStr[i].includes("?") || arrStr[i].includes(":") || arrStr[i].includes(";") || arrStr[i].includes("...") || arrStr[i].includes(" - ")) {
+					arrRes.push(arrStr[i].substring(0, arrStr[i].length - 1));
+				}else{
+					arrRes.push(arrStr[i]);
+				}
+			}
+			//добавляем в массив длину эл-тов
+			for (var i = 0; i < arrRes.length; i++) {
+				arrLength.push(arrRes[i].length);
+			}
+
+			alert(Math.min.apply(null, arrLength));
+
+		}
+
+		strLength("Дана строка, состоящая из слов, разделенных пробелами и знаками препинания. Определить длину самого короткого слова.");
+		
+	</script>
+</body>
+</html>

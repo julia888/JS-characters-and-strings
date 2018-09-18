@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Написать и протестировать функции работы со строками 8</title>
+</head>
+<body>
+	<!--В заданной строке удалить последнее слово -->
+	<script>
+		function delLastWord(str) {
+			str = str.split(" ");
+			var arrNew = [];
+			for (var i = 0; i < str.length - 1; i++) {
+				arrNew.push(str[i]);
+			}
+			alert(arrNew.join(" "));
+		}
+
+		delLastWord("В заданной строке удалить последнее слово");
+		
+	</script>
+</body>
+</html>
